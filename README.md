@@ -20,7 +20,7 @@ If a hook fails, the engine shows the agent anyway: the worst case is the behavi
 At the prompt of a Claude Code terminal session:
 
 ```
-/plugin install lazy-agents --marketplace oscarpedrero/claude-lazy-agents
+/plugin install lazy-agents --marketplace oscarpedrero/lazy-agents
 ```
 
 Answer `y` to add the marketplace, then pick a scope (user scope applies it to every session).
@@ -28,7 +28,7 @@ Answer `y` to add the marketplace, then pick a scope (user scope applies it to e
 From a shell:
 
 ```
-claude plugin install lazy-agents --marketplace oscarpedrero/claude-lazy-agents
+claude plugin install lazy-agents --marketplace oscarpedrero/lazy-agents
 ```
 
 Start a new session afterwards: the agent listing is built when a session starts.
