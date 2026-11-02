@@ -1,5 +1,5 @@
 {
-  "name": "claude-lazy-agents",
+  "name": "lazy-agents",
   "owner": { "name": "Óscar Pedrero", "url": "https://github.com/oscarpedrero" },
   "description": "lazy-agents: load Claude Code subagents on demand to save context tokens.",
   "plugins": [{ "name": "lazy-agents", "source": "./" }]
