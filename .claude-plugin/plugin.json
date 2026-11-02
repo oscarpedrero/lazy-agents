@@ -1,0 +1,10 @@
+{
+  "name": "lazy-agents",
+  "version": "0.1.0",
+  "description": "Hides user-level subagents from the Agent listing; Claude finds and unlocks them on demand with find_agent.",
+  "author": { "name": "Óscar Pedrero", "url": "https://github.com/oscarpedrero" },
+  "homepage": "https://github.com/oscarpedrero/claude-lazy-agents",
+  "repository": "https://github.com/oscarpedrero/claude-lazy-agents",
+  "license": "MIT",
+  "keywords": ["subagents", "context", "tokens", "lazy-loading"]
+}
