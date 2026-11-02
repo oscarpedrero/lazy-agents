@@ -98,14 +98,19 @@ const score = (entry: Entry, terms: string[]) => {
 
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
+    // Names only: enough to dispatch in one step, without paying for every description.
+    await scanDisk($).catch(() => undefined)
+    const names = [...catalog.keys()].sort().join(', ')
+
     await $.tool.register({
       name: 'find_agent',
       description:
-        'Search the catalog of specialist subagents that are hidden from the Agent tool listing ' +
-        '(marketing, sales, game engines, XR, compliance, writing, and more). ' +
-        'Use it before delegating when no listed agent fits the task. ' +
-        'Matching agents are unlocked for this session: then call the Agent tool with the returned ' +
-        'subagent_type, using any Agent option as usual.',
+        'Specialist subagents are hidden from the Agent tool listing to save context. ' +
+        'When one of these names clearly fits the task, call the Agent tool directly with it as ' +
+        'subagent_type (any Agent option works as usual): ' +
+        (names || '(none found)') +
+        '. Call find_agent only when you need the descriptions to choose; it searches them and ' +
+        'unlocks the matches.',
       inputSchema: {
         type: 'object',
         properties: {
@@ -131,6 +136,14 @@ export const register: Register = on => {
     // hide an agent, never offer one the engine would not.
     return unlocked.has(e.agent) ? next(e) : { isOffered: false }
   }).catch(($, e, next) => next(e)) // fail open: a broken hook never hides an agent
+
+  // A direct dispatch of a hidden agent unlocks it before the engine checks the
+  // offer, so the model skips the find_agent turn when the name is enough.
+  on('tool.call', { tool: 'Agent' }, ($, e, next) => {
+    const agent = (e as { subagent_type?: unknown }).subagent_type
+    if (typeof agent === 'string' && catalog.has(agent)) unlocked.add(agent)
+    return next(e)
+  }).catch(($, e, next) => next(e))
 
   on('tool.call', { tool: 'mcp__lazy-agents__find_agent' }, async ($, e) => {
     // The disk scan only adds to the catalog: its failure must not cost the search.

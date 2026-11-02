@@ -83,6 +83,20 @@ test('a huge query is bounded and still answers', async ($, on) => {
   expect(String(found.result)).toContain('No hidden agent matches')
 })
 
+test('a direct Agent dispatch unlocks only the hidden agent it names', async ($, on) => {
+  on('agent.offer', () => ({ isOffered: true }))
+  on('tool.call', () => ({ result: 'dispatched' }))
+
+  await $.agent.offer(offer('SEO Specialist', 'userSettings'))
+  await $.agent.offer(offer('Weibo Strategist', 'userSettings'))
+
+  const call = await $.tool.call({ tool: 'Agent', subagent_type: 'SEO Specialist', description: 'seo', prompt: 'review' })
+  expect(call.result).toBe('dispatched')
+
+  expect(await $.agent.offer(offer('SEO Specialist', 'userSettings'))).toEqual({ isOffered: true })
+  expect(await $.agent.offer(offer('Weibo Strategist', 'userSettings'))).toEqual({ isOffered: false })
+})
+
 test('find_agent with no match unlocks nothing', async ($, on) => {
   on('agent.offer', () => ({ isOffered: true }))
 
