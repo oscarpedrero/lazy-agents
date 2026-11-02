@@ -62,6 +62,27 @@ test('find_agent reads agent files when the engine has offered none yet', async 
   expect(await $.agent.offer(offer('SEO Specialist', 'userSettings'))).toEqual({ isOffered: true })
 })
 
+test('an unlocked agent is still refused when the engine refuses it', async ($, on) => {
+  on('agent.offer', () => ({ isOffered: false }))
+
+  await $.agent.offer(offer('Godot Shader Developer', 'userSettings', 'Godot 4 shaders'))
+  await $.tool.call({ tool: 'mcp__lazy-agents__find_agent', query: 'godot' })
+
+  expect(await $.agent.offer(offer('Godot Shader Developer', 'userSettings'))).toEqual({ isOffered: false })
+})
+
+test('a huge query is bounded and still answers', async ($, on) => {
+  on('agent.offer', () => ({ isOffered: true }))
+
+  await $.agent.offer(offer('Weibo Strategist', 'userSettings', 'Sina Weibo marketing'))
+
+  const found = await $.tool.call({
+    tool: 'mcp__lazy-agents__find_agent',
+    query: `${'(a+)+ '.repeat(5000)}weibo`,
+  })
+  expect(String(found.result)).toContain('No hidden agent matches')
+})
+
 test('find_agent with no match unlocks nothing', async ($, on) => {
   on('agent.offer', () => ({ isOffered: true }))
 

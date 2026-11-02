@@ -18,6 +18,12 @@ const PINNED = new Set([
 const HIDDEN_SOURCES = new Set(['userSettings', 'user'])
 const MAX_RESULTS = 8
 
+// Bounds that keep a hostile or accidental input from costing the session.
+const MAX_QUERY_CHARS = 200
+const MAX_TERMS = 10
+const MAX_SCAN_DEPTH = 6
+const MAX_SCAN_FILES = 1000
+
 type Entry = { agent: string; description: string }
 
 const catalog = new Map<string, Entry>()
@@ -42,17 +48,27 @@ const scanDisk = async ($: EngineInterface) => {
   const home = await $.env.get('HOME')
   if (!home) return
 
-  const walk = async (dir: string): Promise<void> => {
+  let filesRead = 0
+
+  // Symbolic links are listed as kind 'other' and never followed, so the walk
+  // stays inside the agents folder and cannot loop.
+  const walk = async (dir: string, depth: number): Promise<void> => {
+    if (depth > MAX_SCAN_DEPTH) return
+
     const entries = await $.fs.list(dir).catch(() => [])
 
     for (const entry of entries as { name: string; kind: string }[]) {
+      if (filesRead >= MAX_SCAN_FILES) return
+
       const path = `${dir}/${entry.name}`
 
       if (entry.kind === 'dir') {
-        await walk(path)
+        await walk(path, depth + 1)
         continue
       }
       if (entry.kind !== 'file' || !entry.name.endsWith('.md')) continue
+
+      filesRead += 1
 
       const text: string = await $.fs.read(path).catch(() => '')
       const frontmatter = text.match(/^---\n([\s\S]*?)\n---/)?.[1]
@@ -66,7 +82,7 @@ const scanDisk = async ($: EngineInterface) => {
     }
   }
 
-  await walk(`${home}/.claude/agents`)
+  await walk(`${home}/.claude/agents`, 0)
 }
 
 const score = (entry: Entry, terms: string[]) => {
@@ -111,6 +127,8 @@ export const register: Register = on => {
 
     catalog.set(e.agent, { agent: e.agent, description: e.description })
 
+    // Unlocking only hands the decision back to the engine (next): the mod can
+    // hide an agent, never offer one the engine would not.
     return unlocked.has(e.agent) ? next(e) : { isOffered: false }
   }).catch(($, e, next) => next(e)) // fail open: a broken hook never hides an agent
 
@@ -118,8 +136,13 @@ export const register: Register = on => {
     // The disk scan only adds to the catalog: its failure must not cost the search.
     await scanDisk($).catch(() => undefined)
 
-    const query = String((e as { query?: unknown }).query ?? '').toLowerCase()
-    const terms = query.split(/\s+/).filter(term => term.length > 1)
+    const query = String((e as { query?: unknown }).query ?? '')
+      .slice(0, MAX_QUERY_CHARS)
+      .toLowerCase()
+    const terms = query
+      .split(/\s+/)
+      .filter(term => term.length > 1)
+      .slice(0, MAX_TERMS)
 
     if (catalog.size === 0) {
       return { result: 'The hidden-agent catalog is empty: no user agents were offered yet this session.' }
