@@ -15,6 +15,13 @@ Claude Code puts the description of every custom subagent into the Agent tool li
 
 If a hook fails, the engine shows the agent anyway: the worst case is the behaviour you have without the mod.
 
+## What it can access
+
+- Reads the `HOME` environment variable and the `.md` files under `~/.claude/agents/` (up to 6 folders deep and 1000 files; symbolic links are not followed).
+- Registers one tool, `find_agent`, and hooks `session.start`, `agent.offer` and calls to its own tool.
+- No network, no processes, no file writes, no dependencies.
+- It can only hide an agent: unlocking hands the decision back to Claude Code, so it never offers an agent Claude Code would refuse.
+
 ## Install
 
 At the prompt of a Claude Code terminal session:
