@@ -1,0 +1,15 @@
+{
+  "agent": "SEO Specialist",
+  "findings": [
+    { "id": "title", "issue": "No <title> element", "pattern": "<title>|\\btitle (tag|element)|missing (a |the )?(page )?title|no (page )?title" },
+    { "id": "description", "issue": "No meta description", "pattern": "meta description|description meta|meta name=.description" },
+    { "id": "noindex", "issue": "robots meta blocks indexing", "pattern": "noindex" },
+    { "id": "viewport", "issue": "No viewport meta", "pattern": "viewport" },
+    { "id": "lang", "issue": "<html> has no lang attribute", "pattern": "\\blang\\b|language attribute" },
+    { "id": "h1", "issue": "Two <h1> elements", "pattern": "(two|multiple|2|more than one|duplicate)\\W+(\\w+\\W+){0,3}h1|h1\\W+(\\w+\\W+){0,4}(two|multiple|duplicate|twice)" },
+    { "id": "alt", "issue": "Images without alt text", "pattern": "\\balt\\b|alternative text" },
+    { "id": "heading-skip", "issue": "Heading levels skip from h2 to h4", "pattern": "h4|skip|hierarch|heading (order|level|structure|outline)" },
+    { "id": "anchor-text", "issue": "Generic link text \"Click here\"", "pattern": "click here|anchor text|link text|descriptive link" },
+    { "id": "canonical", "issue": "No canonical link", "pattern": "canonical" }
+  ]
+}

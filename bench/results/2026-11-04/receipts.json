@@ -1,0 +1,2007 @@
+{
+ "schema": "lazy-agents.bench/v1",
+ "runs": [
+  {
+   "run": "seo-off-1",
+   "task": "seo",
+   "version": "off",
+   "round": 1,
+   "session": "1b86d986-7e65-4d00-8f18-955ff530e37b",
+   "ok": true,
+   "cost_usd": 0.8159882,
+   "turns": 2,
+   "duration_ms": 38276,
+   "cold": true,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011Cghtxbbq8sgyVLVj1yWcm",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 221675,
+     "input": 2,
+     "output": 603,
+     "cache_read": 12670,
+     "cache_write": 63078
+    },
+    {
+     "request_id": "req_011CghtznDrWyqoAwEgkg2rc",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 237214,
+     "input": 2,
+     "output": 940,
+     "cache_read": 75748,
+     "cache_write": 5610
+    },
+    {
+     "request_id": "req_011CghtyBsbJ9hEPX5415cp9",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112618,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 29113
+    },
+    {
+     "request_id": "req_011CghtyJgcahTpwKC2Jtseo",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 123220,
+     "input": 2,
+     "output": 2167,
+     "cache_read": 37178,
+     "cache_write": 3711
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "seo-on-1",
+   "task": "seo",
+   "version": "on",
+   "round": 1,
+   "session": "70046894-fa95-4bde-b4cf-886f854672dc",
+   "ok": true,
+   "cost_usd": 0.766146,
+   "turns": 3,
+   "duration_ms": 49870,
+   "cold": true,
+   "agents_in_init": 175,
+   "listing_bytes": 3951,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011Cghu1ojAsiJy1BwKh4NcA",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 183981,
+     "input": 2,
+     "output": 516,
+     "cache_read": 14476,
+     "cache_write": 48410
+    },
+    {
+     "request_id": "req_011Cghu4LvCsp13sL5b6Upqu",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 205502,
+     "input": 2,
+     "output": 156,
+     "cache_read": 62886,
+     "cache_write": 8369
+    },
+    {
+     "request_id": "req_011Cghu4cBiQNU3yn26azGoo",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 208214,
+     "input": 2,
+     "output": 1363,
+     "cache_read": 71255,
+     "cache_write": 628
+    },
+    {
+     "request_id": "req_011Cghu2Mb5G9i5KJ6hUoQUA",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112517,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 29053
+    },
+    {
+     "request_id": "req_011Cghu2YxwRyws8C98eLLfA",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 127419,
+     "input": 2,
+     "output": 2716,
+     "cache_read": 37118,
+     "cache_write": 5281
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-off-1",
+   "task": "idle",
+   "version": "off",
+   "round": 1,
+   "session": "73219d65-e954-4c76-afab-46567f2230a4",
+   "ok": true,
+   "cost_usd": 0.5506994000000001,
+   "turns": 2,
+   "duration_ms": 4059,
+   "cold": true,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011Cghu5rYx5f5Le15bV1VFA",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 222079,
+     "input": 2,
+     "output": 87,
+     "cache_read": 14806,
+     "cache_write": 61125
+    },
+    {
+     "request_id": "req_011Cghu63M5nvnGiq9Lx7gxS",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 235433,
+     "input": 2,
+     "output": 13,
+     "cache_read": 75931,
+     "cache_write": 5192
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-on-1",
+   "task": "idle",
+   "version": "on",
+   "round": 1,
+   "session": "d8d8be06-8877-4829-9696-31b2272218d4",
+   "ok": true,
+   "cost_usd": 0.42920420000000004,
+   "turns": 2,
+   "duration_ms": 6815,
+   "cold": true,
+   "agents_in_init": 175,
+   "listing_bytes": 3666,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011Cghu6ewiiwJspp9pkjtAd",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 178558,
+     "input": 2,
+     "output": 221,
+     "cache_read": 16612,
+     "cache_write": 44157
+    },
+    {
+     "request_id": "req_011Cghu6zHJgxfFzfnYAtiD8",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 197475,
+     "input": 2,
+     "output": 13,
+     "cache_read": 60769,
+     "cache_write": 6972
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  },
+  {
+   "run": "seo-on-2",
+   "task": "seo",
+   "version": "on",
+   "round": 2,
+   "session": "5475e3a0-430a-4809-98d5-04c9a8dca2cf",
+   "ok": true,
+   "cost_usd": 0.5533351999999999,
+   "turns": 3,
+   "duration_ms": 50956,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 3951,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011Cghu7WVzoQdRkus1k1YtT",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 184497,
+     "input": 2,
+     "output": 627,
+     "cache_read": 45300,
+     "cache_write": 17830
+    },
+    {
+     "request_id": "req_011CghuAHZTvpyqbRk9H6Pu7",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 207457,
+     "input": 2,
+     "output": 191,
+     "cache_read": 63130,
+     "cache_write": 8754
+    },
+    {
+     "request_id": "req_011CghuAXoDc9ST83q473nJu",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 210257,
+     "input": 2,
+     "output": 997,
+     "cache_read": 71884,
+     "cache_write": 673
+    },
+    {
+     "request_id": "req_011Cghu81y3ZpSt64WboHqDE",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112712,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 29164
+    },
+    {
+     "request_id": "req_011Cghu897A4kEG62QBDywTZ",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 127614,
+     "input": 2,
+     "output": 387,
+     "cache_read": 37229,
+     "cache_write": 5281
+    },
+    {
+     "request_id": "req_011Cghu8SPDXDTX7EkofXixe",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 130288,
+     "input": 2,
+     "output": 216,
+     "cache_read": 42510,
+     "cache_write": 688
+    },
+    {
+     "request_id": "req_011Cghu8gAgvL9P46CWqLh29",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 132456,
+     "input": 2,
+     "output": 2284,
+     "cache_read": 43198,
+     "cache_write": 371
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "seo-off-2",
+   "task": "seo",
+   "version": "off",
+   "round": 2,
+   "session": "db725df1-1436-422c-97f0-4a75887af5a2",
+   "ok": true,
+   "cost_usd": 0.520959,
+   "turns": 3,
+   "duration_ms": 34327,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuBnXWVc5cZLZWK1z3C",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 215229,
+     "input": 2,
+     "output": 494,
+     "cache_read": 43494,
+     "cache_write": 29627
+    },
+    {
+     "request_id": "req_011CghuDRLMcewMSAKbFYnYf",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 221798,
+     "input": 2,
+     "output": 120,
+     "cache_read": 73121,
+     "cache_write": 2162
+    },
+    {
+     "request_id": "req_011CghuDcX4fXqE2BwXDBrPU",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 224339,
+     "input": 2,
+     "output": 850,
+     "cache_read": 75283,
+     "cache_write": 569
+    },
+    {
+     "request_id": "req_011CghuCDJXvaGCqyuSJSq4H",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112324,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 28997
+    },
+    {
+     "request_id": "req_011CghuCNWv6DKNYVKJ8xnY2",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 118658,
+     "input": 2,
+     "output": 1376,
+     "cache_read": 37062,
+     "cache_write": 2293
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-on-2",
+   "task": "idle",
+   "version": "on",
+   "round": 2,
+   "session": "ffb2cfd7-bb61-4625-b2b3-7dc66fa6127d",
+   "ok": true,
+   "cost_usd": 0.1524094,
+   "turns": 2,
+   "duration_ms": 5863,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 3666,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuEkoR1GiefkPSLKr7H",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 178179,
+     "input": 2,
+     "output": 143,
+     "cache_read": 45269,
+     "cache_write": 15389
+    },
+    {
+     "request_id": "req_011CghuF3K68g8TtuZ5AhLdP",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 181259,
+     "input": 2,
+     "output": 13,
+     "cache_read": 60658,
+     "cache_write": 622
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-off-2",
+   "task": "idle",
+   "version": "off",
+   "round": 2,
+   "session": "4f19813d-3aa0-4f2e-b513-4c2bcacb97da",
+   "ok": true,
+   "cost_usd": 0.2977236,
+   "turns": 2,
+   "duration_ms": 4590,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuFZcVaBBH4teeUp2Qt",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 218653,
+     "input": 2,
+     "output": 165,
+     "cache_read": 43463,
+     "cache_write": 31132
+    },
+    {
+     "request_id": "req_011CghuFoSwMW1BhvzVLgLGe",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 227080,
+     "input": 2,
+     "output": 13,
+     "cache_read": 74595,
+     "cache_write": 2685
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  },
+  {
+   "run": "seo-off-3",
+   "task": "seo",
+   "version": "off",
+   "round": 3,
+   "session": "dcc12482-db68-4e7a-b15e-338f137e2dd3",
+   "ok": true,
+   "cost_usd": 0.6240943999999999,
+   "turns": 3,
+   "duration_ms": 40946,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuGPzaBQ4ELDGyX3KNp",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 216434,
+     "input": 2,
+     "output": 642,
+     "cache_read": 43494,
+     "cache_write": 30077
+    },
+    {
+     "request_id": "req_011CghuJaFn5ce42F5js4nU9",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 243329,
+     "input": 2,
+     "output": 153,
+     "cache_read": 73571,
+     "cache_write": 10244
+    },
+    {
+     "request_id": "req_011CghuJnEM4kjJGJcJiUN9R",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 245806,
+     "input": 2,
+     "output": 838,
+     "cache_read": 83815,
+     "cache_write": 543
+    },
+    {
+     "request_id": "req_011CghuGybfaZ2x2Pu4zUq6S",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112556,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 29077
+    },
+    {
+     "request_id": "req_011CghuH6pja6JT6jTdR2dMV",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 127371,
+     "input": 2,
+     "output": 2112,
+     "cache_read": 37142,
+     "cache_write": 5248
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "seo-on-3",
+   "task": "seo",
+   "version": "on",
+   "round": 3,
+   "session": "9f1c6eed-b7ae-4af1-8505-c2fc1cf9ac75",
+   "ok": true,
+   "cost_usd": 0.49482539999999997,
+   "turns": 2,
+   "duration_ms": 46566,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 3951,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuKqNdwLWW3N2nkAgg2",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 183619,
+     "input": 2,
+     "output": 634,
+     "cache_read": 45300,
+     "cache_write": 17484
+    },
+    {
+     "request_id": "req_011CghuNZ2ijCma9mmF5GeYg",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 206954,
+     "input": 2,
+     "output": 965,
+     "cache_read": 62784,
+     "cache_write": 8919
+    },
+    {
+     "request_id": "req_011CghuLa69ueYgtj9jxSoSW",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112614,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 29108
+    },
+    {
+     "request_id": "req_011CghuLtvEqCzS7gh3tj153",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 127516,
+     "input": 2,
+     "output": 2379,
+     "cache_read": 37173,
+     "cache_write": 5281
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-off-3",
+   "task": "idle",
+   "version": "off",
+   "round": 3,
+   "session": "d3c1d7ba-f09f-4170-b854-e5b43f947ad7",
+   "ok": true,
+   "cost_usd": 0.2868522,
+   "turns": 2,
+   "duration_ms": 10332,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuPvogPBBeQcDHjZRXF",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 215817,
+     "input": 2,
+     "output": 87,
+     "cache_read": 43463,
+     "cache_write": 29895
+    },
+    {
+     "request_id": "req_011CghuQVrGndpsp3fCLtNxc",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 223511,
+     "input": 2,
+     "output": 13,
+     "cache_read": 73358,
+     "cache_write": 2789
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-on-3",
+   "task": "idle",
+   "version": "on",
+   "round": 3,
+   "session": "c2b16691-54df-4717-a37f-befbe1da069e",
+   "ok": true,
+   "cost_usd": 0.1505356,
+   "turns": 2,
+   "duration_ms": 4729,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 3666,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuRE5HAayKQfAHhnArP",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 178590,
+     "input": 2,
+     "output": 150,
+     "cache_read": 45269,
+     "cache_write": 15560
+    },
+    {
+     "request_id": "req_011CghuRTQxVfoXYVvwkVxgJ",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 180322,
+     "input": 2,
+     "output": 13,
+     "cache_read": 60829,
+     "cache_write": 195
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  },
+  {
+   "run": "seo-on-4",
+   "task": "seo",
+   "version": "on",
+   "round": 4,
+   "session": "6b2e5405-d700-4bbd-8eef-f4646308b27c",
+   "ok": true,
+   "cost_usd": 0.43964000000000003,
+   "turns": 2,
+   "duration_ms": 48132,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 3951,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuS1YjayvGXgdman1XE",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 178590,
+     "input": 2,
+     "output": 565,
+     "cache_read": 45300,
+     "cache_write": 15529
+    },
+    {
+     "request_id": "req_011CghuUnTGfj5MwMYRZMRDj",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 193827,
+     "input": 2,
+     "output": 1073,
+     "cache_read": 60829,
+     "cache_write": 5326
+    },
+    {
+     "request_id": "req_011CghuSoMYgGV97CkN5WG6r",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112388,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 29031
+    },
+    {
+     "request_id": "req_011CghuTC7mLE99ykBy9a9Do",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 123022,
+     "input": 2,
+     "output": 2194,
+     "cache_read": 37096,
+     "cache_write": 3863
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "seo-off-4",
+   "task": "seo",
+   "version": "off",
+   "round": 4,
+   "session": "993eb738-3329-4637-a0d7-bea2cb7a20ba",
+   "ok": true,
+   "cost_usd": 0.6641946,
+   "turns": 3,
+   "duration_ms": 63813,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [
+    "SEO Specialist"
+   ],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghuVxx5RhgYbg8NXATPN",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 221573,
+     "input": 2,
+     "output": 507,
+     "cache_read": 43494,
+     "cache_write": 32075
+    },
+    {
+     "request_id": "req_011CghuZYuq8kxdN2t6ioPWR",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 247389,
+     "input": 2,
+     "output": 158,
+     "cache_read": 75569,
+     "cache_write": 9559
+    },
+    {
+     "request_id": "req_011CghuZq4S4MfD9mHvf855V",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 250104,
+     "input": 2,
+     "output": 1090,
+     "cache_read": 85128,
+     "cache_write": 630
+    },
+    {
+     "request_id": "req_011CghuWZbRVY8Kvjsfuo5kx",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 112494,
+     "input": 2,
+     "output": 70,
+     "cache_read": 8065,
+     "cache_write": 29067
+    },
+    {
+     "request_id": "req_011CghuWnESNnNmzND4Dytpu",
+     "who": "subagent:SEO Specialist",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "tools_bytes": 5469,
+     "body_bytes": 127032,
+     "input": 2,
+     "output": 3428,
+     "cache_read": 37132,
+     "cache_write": 5154
+    }
+   ],
+   "children": [
+    {
+     "agent": "SEO Specialist",
+     "tools_offered": [
+      "Edit",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "Write"
+     ],
+     "tools_used": [
+      "Read"
+     ],
+     "frontmatter_tools": [
+      "WebFetch",
+      "WebSearch",
+      "Read",
+      "Write",
+      "Edit"
+     ],
+     "offered_outside_frontmatter": [],
+     "frontmatter_not_offered": []
+    }
+   ],
+   "findings": [
+    "title",
+    "description",
+    "noindex",
+    "viewport",
+    "lang",
+    "h1",
+    "alt",
+    "heading-skip",
+    "anchor-text",
+    "canonical"
+   ],
+   "findings_total": 10,
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-on-4",
+   "task": "idle",
+   "version": "on",
+   "round": 4,
+   "session": "4f61069d-1286-4983-8a15-f07f4d56dd57",
+   "ok": true,
+   "cost_usd": 0.1434006,
+   "turns": 2,
+   "duration_ms": 4552,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 3666,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011CghubHPypgLkUQM6C5q3J",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 176856,
+     "input": 2,
+     "output": 87,
+     "cache_read": 45269,
+     "cache_write": 14905
+    },
+    {
+     "request_id": "req_011CghubV7gWBtEnigTS6Skw",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "Write",
+      "DeferredToolPlaceholder",
+      "mcp__lazy-agents__find_agent"
+     ],
+     "tools_bytes": 38467,
+     "body_bytes": 177407,
+     "input": 2,
+     "output": 13,
+     "cache_read": 60174,
+     "cache_write": 132
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  },
+  {
+   "run": "idle-off-4",
+   "task": "idle",
+   "version": "off",
+   "round": 4,
+   "session": "0b0ab767-4fbb-4232-86df-f584b404c944",
+   "ok": true,
+   "cost_usd": 0.265342,
+   "turns": 2,
+   "duration_ms": 4803,
+   "cold": false,
+   "agents_in_init": 175,
+   "listing_bytes": 45235,
+   "agent_calls": [],
+   "find_agent_calls": 0,
+   "requests": [
+    {
+     "request_id": "req_011Cghuc59K9gvUgEeZepGgu",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 215718,
+     "input": 2,
+     "output": 87,
+     "cache_read": 43463,
+     "cache_write": 29864
+    },
+    {
+     "request_id": "req_011CghucJ8uj48zdCKMXBNyb",
+     "who": "main",
+     "model": "claude-opus-5-5",
+     "tools_offered": [
+      "Agent",
+      "Bash",
+      "Edit",
+      "Glob",
+      "Grep",
+      "ListAgents",
+      "Read",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "ShareOnboardingGuide",
+      "Skill",
+      "ToolSearch",
+      "Workflow",
+      "DeferredToolPlaceholder",
+      "Write"
+     ],
+     "tools_bytes": 34201,
+     "body_bytes": 216269,
+     "input": 2,
+     "output": 13,
+     "cache_read": 73327,
+     "cache_write": 132
+    }
+   ],
+   "children": [],
+   "unmatched_requests": 0
+  }
+ ]
+}
