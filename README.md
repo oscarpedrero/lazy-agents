@@ -66,6 +66,35 @@ Cost per task with `claude -p` (Claude Opus 5.5) and the same 170 user agents, c
 - The first session after the tool list changes (installing, updating or removing the mod) writes the whole prompt to the cache once and costs more; the figures above are warm.
 - The agent listing the model receives (the `agent_listing_delta` row in the transcript) drops from 95.4 KB to 8.4 KB.
 
+### Receipt-backed run (2026-11-04)
+
+Same 170 user agents (175 in the session's agent list with built-ins and plugins), Claude Opus 5.5, `bench/run.sh 4`: four alternating rounds, 16 runs, $7.16 in total. Receipts: [`bench/results/2026-11-04/receipts.json`](bench/results/2026-11-04/receipts.json).
+
+| Task | Cache | No mod | lazy-agents |
+|---|---|---|---|
+| Delegate an SEO review (warm, 3 runs each) | warm | $0.603 | $0.496 (−18%) |
+| Delegate an SEO review (first run) | cold | $0.816 | $0.766 (−6%) |
+| Read one line, delegate nothing (warm, 3 runs each) | warm | $0.283 | $0.149 (−47%) |
+| Read one line, delegate nothing (first run) | cold | $0.551 | $0.429 (−22%) |
+
+- Routing: 8 of 8 SEO runs dispatched `SEO Specialist`, with no `find_agent` call in any run.
+- Child tools: in every SEO run the proxy shows the child offered exactly its frontmatter set (`Edit, Read, WebFetch, WebSearch, Write`); it called only `Read`.
+- Findings: every SEO run named all 10 planted problems, with and without the mod. The task does not separate the versions on quality; it shows the cheaper runs did not skip problems.
+- Every one of the 55 API requests in the transcripts has a matching proxy receipt.
+- Per-run spread is wide: in round 2 the run with the mod cost more than the one without ($0.553 vs $0.521, 7 requests vs 5). Three warm runs per cell show the trend, not a precise figure.
+- The agent listing the model receives drops from 45.2 KB to about 3.9 KB (sum of `agent_listing_delta` lines).
+
+### Reproduce
+
+`bench/run.sh [rounds] [out]` runs both tasks with and without the mod, alternating which goes first, all in one working copy of `bench/fixture` (so the prompt cache is comparable). `bun bench/report.ts <out>` writes `<out>/receipts.json` and prints the summary. Needs `bun` and a logged-in `claude`.
+
+What every run keeps, so the claims do not rest on the agent describing itself:
+
+- **Request receipts.** `bench/proxy.ts` sits between Claude Code and the API (`ANTHROPIC_BASE_URL`) and logs, per request, the API request id, the model and the names of the tools offered. It never writes headers or message contents. The report joins those ids with the session transcripts for usage.
+- **Child trace.** The subagent's own transcript gives the agent that ran (`agentType`), the tools it was offered (from the proxy) and the tools it called; the report compares them with the agent's frontmatter.
+- **Fixed findings.** `bench/fixture/index.html` has ten planted SEO problems listed in `bench/expected-seo.json`; each run is scored on how many the answer names, so a cheaper run that misses problems shows up. Matching is by keyword and can over-count; the raw answer is in the stream file.
+- **Cold and warm apart.** A run counts as cold when its first request writes more to the prompt cache than it reads.
+
 ## Caveats
 
 - `/context` estimates "Custom agents" from the agent files on disk and does not ask the `agent.offer` hook, so it keeps showing the full figure. Check the session transcript to see what the model receives.
